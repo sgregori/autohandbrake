@@ -7,6 +7,6 @@ for entry in $load_folder/*.mkv
 do
     if [ ! -f "$save_folder/$entry" ];then
         echo "Processing: $entry"  
-	nice -n19 HandBrakeCLI $options -i "$entry" -o "$save_folder/$entry"
+	nice -n19 HandBrakeCLI $options -i "$load_folder/$entry" -o "$save_folder/$entry"
     fi
 done
